@@ -9,7 +9,7 @@
     "test": "jest --coverage",
     "release": "standard-version --sign",
     "release-dry-run": "standard-version --sign --dry-run",
-    "owasp": "owasp-dependency-check --project \"hasura-auth-server\" -f HTML -o build/dependencyUpdates/dependency-check-report.html"
+    "owasp": "owasp-dependency-check --project \"hasura-auth-server\" -f HTML -o dependency-check-report.html"
   },
   "homepage": "https://github.com/Panzer1119/hasura-auth-server#readme",
   "keywords": [],
