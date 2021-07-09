@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/Panzer1119/hasura-auth-server/compare/v0.1.0...v0.1.1) (2021-07-09)
+
+
+### Features
+
+* add server host to config.ts ([e0da70c](https://github.com/Panzer1119/hasura-auth-server/commit/e0da70cf914b490b767e4e849911c84a0a1e2b23))
+
+
+### Bug Fixes
+
+* add check if file is directory and some debug outputs ([d1b09dc](https://github.com/Panzer1119/hasura-auth-server/commit/d1b09dced1f26235eda3b0c824088466213e24a6))
+* add protocol to config.ts ([f5bed6e](https://github.com/Panzer1119/hasura-auth-server/commit/f5bed6ebbaf06ee8f9f67f88a213c5e9de755f4f))
+
 ## 0.1.0 (2021-07-09)
 
 
