@@ -18,7 +18,7 @@
 import express from "express";
 import cors from "cors";
 import fs from "fs";
-import {IS_DEV, SERVER_PORT, USERS_FILE} from "./config";
+import {IS_DEV, SERVER_HOST, SERVER_PORT, USERS_FILE} from "./config";
 
 const app = express();
 
@@ -38,6 +38,7 @@ loadUsers();
 function loadUsers() {
     if (first) {
         console.debug(`IS_DEV: \"${IS_DEV}\"`);
+        console.debug(`SERVER_HOST: \"${SERVER_HOST}\"`);
         console.debug(`SERVER_PORT: \"${SERVER_PORT}\"`);
         console.debug(`USERS_FILE: \"${USERS_FILE}\"`);
         first = false;
@@ -89,4 +90,4 @@ app.get('/webhook', (request, response) => {
 });
 
 
-const server = app.listen(SERVER_PORT, () => console.log('Your app is listening on http://localhost:' + SERVER_PORT));
+const server = app.listen(SERVER_PORT, () => console.log(`Your app is listening on http://${SERVER_HOST}:${SERVER_PORT}`));

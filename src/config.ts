@@ -20,8 +20,10 @@
  */
 const IS_DEV = process.env.NODE_ENV !== 'production';
 
+const SERVER_HOST = process.env.HOST || "0.0.0.0";
+
 const SERVER_PORT = Number(process.env.PORT) || 3000;
 
-const USERS_FILE = String(process.env.USERS_FILE) || "users.json";
+const USERS_FILE = process.env.USERS_FILE || "/config/users.json";
 
-export { IS_DEV, SERVER_PORT, USERS_FILE };
+export { IS_DEV, SERVER_HOST, SERVER_PORT, USERS_FILE };
