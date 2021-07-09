@@ -4,8 +4,8 @@
   "description": "Webhook Authentication Server for Hasura",
   "main": "server.js",
   "scripts": {
-    "start-ts-node-dev": "ts-node-dev --project ./src/tsconfig.json src/server.ts",
-    "start-production": "ts-node --transpile-only --project ./src/tsconfig.json src/server.ts",
+    "start-ts-node-dev": "ts-node-dev --project tsconfig.json src/server.ts",
+    "start-production": "ts-node --transpile-only --project tsconfig.json src/server.ts",
     "test": "jest --coverage",
     "release": "standard-version --sign",
     "release-dry-run": "standard-version --sign --dry-run"
