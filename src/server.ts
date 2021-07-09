@@ -18,7 +18,7 @@
 import express from "express";
 import cors from "cors";
 import fs from "fs";
-import {IS_DEV, SERVER_HOST, SERVER_PORT, USERS_FILE} from "./config";
+import {IS_DEV, SERVER_HOST, SERVER_PORT, SERVER_PROTOCOL, USERS_FILE} from "./config";
 
 const app = express();
 
@@ -90,4 +90,4 @@ app.get('/webhook', (request, response) => {
 });
 
 
-const server = app.listen(SERVER_PORT, () => console.log(`Your app is listening on http://${SERVER_HOST}:${SERVER_PORT}`));
+app.listen(SERVER_PORT, () => console.log(`Your app is listening on ${SERVER_PROTOCOL}://${SERVER_HOST}:${SERVER_PORT}`));
