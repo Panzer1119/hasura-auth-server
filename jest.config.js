@@ -33,6 +33,8 @@ module.exports = {
     // Indicates which provider should be used to instrument code for coverage
     coverageProvider: "v8",
 
+    //testResultsProcessor: "jest-sonar-reporter",
+
     // A list of reporter names that Jest uses when writing coverage reports
     // coverageReporters: [
     //   "json",
@@ -114,7 +116,7 @@ module.exports = {
     // restoreMocks: false,
 
     // The root directory that Jest should scan for tests and modules within
-    // rootDir: undefined,
+    rootDir: "src",
 
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
