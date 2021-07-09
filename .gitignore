@@ -4,6 +4,8 @@
 
 .idea
 users.json
+build
+dependency-check-bin
 
 # User-specific stuff
 .idea/**/workspace.xml
