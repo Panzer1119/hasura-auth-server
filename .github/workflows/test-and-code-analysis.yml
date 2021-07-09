@@ -1,4 +1,4 @@
-name: Code Analysis
+name: Test and Code Analysis
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'main'
 
 jobs:
-  Code-Analysis:
+  Test-and-Code-Analysis:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
