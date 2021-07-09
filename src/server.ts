@@ -18,7 +18,7 @@
 import express from "express";
 import cors from "cors";
 import fs from "fs";
-import {SERVER_PORT, USERS_FILE} from "./config";
+import {IS_DEV, SERVER_PORT, USERS_FILE} from "./config";
 
 const app = express();
 
@@ -30,11 +30,24 @@ app.use(express.json())
 
 app.get('/', (req, res) => res.send('Webhooks are running'));
 
+let first = true;
 let users: [];
 
+loadUsers();
+
 function loadUsers() {
+    if (first) {
+        console.debug(`IS_DEV: \"${IS_DEV}\"`);
+        console.debug(`SERVER_PORT: \"${SERVER_PORT}\"`);
+        console.debug(`USERS_FILE: \"${USERS_FILE}\"`);
+        first = false;
+    }
     if (!fs.existsSync(USERS_FILE)) {
         console.error(`You need to create a "${USERS_FILE}" file`);
+        return;
+    }
+    if (fs.lstatSync(USERS_FILE).isDirectory()) {
+        console.error(`Your file "${USERS_FILE}" is a directory`);
         return;
     }
     const rawData = fs.readFileSync(USERS_FILE, "utf-8");
