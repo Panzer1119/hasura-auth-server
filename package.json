@@ -1,0 +1,41 @@
+{
+  "name": "hasura-auth-server",
+  "version": "0.1.0",
+  "description": "Webhook Authentication Server for Hasura",
+  "main": "server.js",
+  "scripts": {
+    "start-ts-node-dev": "ts-node-dev --project ./src/tsconfig.json src/server.ts",
+    "start": "node dist/server.js",
+    "test": "jest --coverage"
+  },
+  "homepage": "https://github.com/Panzer1119/hasura-auth-server#readme",
+  "keywords": [],
+  "author": {
+    "name": "Paul Hagedorn",
+    "email": "panzer1119@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Panzer1119/hasura-auth-server"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^26.0.24",
+    "@types/request": "^2.48.6",
+    "@types/typescript": "^2.0.0",
+    "@types/uuid": "^8.3.1",
+    "jest": "^27.0.6",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.3.0",
+    "uuid": "^3.4.0"
+  }
+}
