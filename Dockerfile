@@ -6,9 +6,11 @@ ENV PORT 8046
 
 WORKDIR /app
 
-COPY . .
+COPY package*.json ./
 
-RUN npm ci
+RUN npm ci --only=production
+
+COPY . .
 
 EXPOSE 8046
 
