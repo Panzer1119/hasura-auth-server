@@ -89,5 +89,4 @@ app.get('/webhook', (request, response) => {
     }));
 });
 
-
 app.listen(SERVER_PORT, () => console.log(`Your app is listening on ${SERVER_PROTOCOL}://${SERVER_HOST}:${SERVER_PORT}`));
